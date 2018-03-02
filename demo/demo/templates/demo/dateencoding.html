@@ -1,0 +1,47 @@
+{% extends 'demo/base.html' %}
+
+{% load bootstrap3 %}
+
+{% block title %}
+    HTM Framework
+{% endblock %}
+
+{% block content %}
+
+	<ul class="nav nav-tabs">
+  <li role="presentation"><a href="http://localhost:8000/categoryencoding">Category Encoding</a></li>
+  <li role="presentation"><a href="http://localhost:8000/scalarencoding">Scalar Encoding</a></li>
+  <li role="presentation" class="active"><a href="http://localhost:8000/dateencoding">Date Encoding</a></li>
+</ul>
+	<p></p>
+	<div class="form-group bootstrap3-required"><label class="control-label" for="id_file1">Upload Data</label><div class="row bootstrap3-multi-input"><div class="col-xs-12"><input type="file" name="file1" title="" required class="" id="id_file1" /></div></div></div>
+    
+	<div class="form-group"><label class="control-label" for="id_message">Season</label><div class="control-label"><input type="text" name="season" title="my_help_text" placeholder="0" class="form-control" id="id_season" /></div></div>
+	<div class="form-group"><label class="control-label" for="id_message">Day Of Week</label><div class="control-label"><input type="text" name="dayofweek" title="my_help_text" placeholder="0" class="form-control" id="id_dayofweek" /></div></div>
+	<div class="form-group"><label class="control-label" for="id_message">Weekend</label><div class="control-label"><input type="text" name="weekend" title="my_help_text" placeholder="0" class="form-control" id="id_weekend" /></div></div>
+	<div class="form-group"><label class="control-label" for="id_message">Holiday</label><div class="control-label"><input type="text" name="holiday" title="my_help_text" placeholder="0" class="form-control" id="id_holiday" /></div></div>
+	<div class="form-group"><label class="control-label" for="id_message">Time Of Day</label><div class="control-label"><input type="text" name="timeofday" title="my_help_text" placeholder="0" class="form-control" id="id_timeofday" /></div></div>
+	<div class="form-group"><label class="control-label" for="id_message">Custom Days</label><div class="control-label"><input type="text" name="customdays" title="my_help_text" placeholder="0" class="form-control" id="id_customdays" /></div></div>
+	<div class="form-group"><label class="control-label" for="id_message">Forced</label><div class="control-label"><input type="text" name="forced" title="my_help_text" placeholder="True" class="form-control" id="id_forced" /></div></div>
+	<div class="form-group"><label class="control-label" for="id_message">Name</label><div class="control-label"><input type="text" name="name" title="my_help_text" placeholder="" class="form-control" id="id_name" /></div></div>
+	
+	
+	<div class="form-group bootstrap3-req"><label class="control-label">Other Options</label><div class="control-label"><div id="id_category2">    
+	<div class="checkbox"><label for="id_category2_0"><input type="checkbox" name="category2" value="1" id="id_category2_0" class="" />
+	Spatial Pooling</label></div>                                                                                                    
+                                                                                                                                     
+	<div class="checkbox"><label for="id_category2_1"><input type="checkbox" name="category2" value="2" id="id_category2_1" class="" />
+	Temporal Memory</label></div>                                                                                                    
+	                                                                                                                                 
+	<div class="checkbox"><label for="id_category2_2"><input type="checkbox" name="category2" value="3" id="id_category2_2" class="" />
+	Classify Data</label></div>                                                                                                      
+	                                                                                                                                 
+	<div class="checkbox"><label for="id_category2_3"><input type="checkbox" name="category2" value="4" id="id_category2_3" class="" />
+	Detect Anomaly</label></div>	
+	</div>
+	
+	{% bootstrap_button "Run" button_type="submit" button_class="btn-primary" %}
+
+</div></div>
+	
+{% endblock %}
